@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<title>ASTE | Home</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
+
+<!-- Favicons -->
+<link th:href="@{/img/favicon.png}" rel="icon">
+<link th:href="@{/img/apple-touch-icon.png}" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+	rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link th:href="@{/vendor/aos/aos.css}" rel="stylesheet">
+<link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet">
+<link th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}"
+	rel="stylesheet">
+<link th:href="@{/vendor/boxicons/css/boxicons.min.css}"
+	rel="stylesheet">
+<link th:href="@{/vendor/glightbox/css/glightbox.min.css}"
+	rel="stylesheet">
+<link th:href="@{/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link th:href="@{/css/style.css}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<!-- ======= Top Bar ======= -->
+
+	<section id="topbar" class="d-flex align-items-center">
+
+		<div
+			class="container d-flex justify-content-center justify-content-md-between">
+			<div class="contact-info d-flex align-items-center">
+				<i class="bi bi-envelope d-flex align-items-center"><a
+					href="mailto:hr@aste.net.in">hr@aste.net.in</a></i> <i
+					class="bi bi-phone d-flex align-items-center ms-4"><span>0194-2300302</span></i>
+			</div>
+			<div class="social-links d-none d-md-flex align-items-center">
+				<a href="#" class="twitter"><i class="bi bi-twitter"></i></a> <a
+					href="#" class="facebook"><i class="bi bi-facebook"></i></a> <a
+					href="#" class="instagram"><i class="bi bi-instagram"></i></a> <a
+					href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+			</div>
+		</div>
+	</section>
+	<th:block th:if="${session.message}">
+		<div class="alert alert-success">[[${session.message}]]</div>
+		<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+	</th:block>
+
+	<!-- ======= Header ======= -->
+	<header id="header" class="d-flex align-items-center">
+		<div
+			class="container d-flex align-items-center justify-content-between">
+
+			<h1 class="logo">
+				<a href="index.html">ASTE<span>.</span></a>
+			</h1>
+			<!-- Uncomment below if you prefer to use an image logo -->
+			<!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+					<li><a class="nav-link scrollto" href="#about">About</a></li>
+					<li class="dropdown"><a href="#services"><span>Services</span>
+							<i class="bi bi-chevron-down"></i></a>
+						<ul>
+							<li><a href="#">Full-Stack Development</a></li>
+
+							<li><a href="#">Mobile App Development</a></li>
+							<li><a href="#">Web Development</a></li>
+						</ul></li>
+					<li><a class="nav-link scrollto" href="#contact">Contact
+							Us</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav>
+			<!-- .navbar -->
+
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!-- ======= Hero Section ======= -->
+	<section id="hero" class="d-flex align-items-center">
+		<div class="container" data-aos="zoom-out" data-aos-delay="100">
+			<h1>
+				Welcome to <span>Alamdar Software Technology And Engineering
+					Pvt Ltd.</span>
+			</h1>
+			<h2>A leading software development company dedicated to bringing
+				your digital dreams to life. With a passionate team of experienced
+				developers, innovative designers, and visionary strategists.</h2>
+			<div class="d-flex">
+				<a href="#about" class="btn-get-started scrollto">Get Started</a>
+				<!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i
+            class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+			</div>
+		</div>
+	</section>
+	<!-- End Hero -->
+
+	<main id="main">
+
+		<!-- ======= Featured Services Section ======= -->
+		<section id="featured-services" class="featured-services">
+			<div class="container" data-aos="fade-up">
+
+				<div class="row">
+					<div
+						class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+						<div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+							<div class="icon">
+								<i class="bx bxl-dribbble"></i>
+							</div>
+							<h4 class="title">
+								<a href="">Full-Stack Development</a>
+							</h4>
+							<p class="description">Our experts are proficient in both
+								front-end and back-end technologies.</p>
+						</div>
+					</div>
+
+					<div
+						class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+						<div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+							<div class="icon">
+								<i class="bx bx-file"></i>
+							</div>
+							<h4 class="title">
+								<a href="">Mobile App Development</a>
+							</h4>
+							<p class="description">Captivate your audience with
+								cutting-edge mobile applications for iOS and Android platforms.</p>
+						</div>
+					</div>
+
+					<div
+						class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+						<div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+							<div class="icon">
+								<i class="bx bx-tachometer"></i>
+							</div>
+							<h4 class="title">
+								<a href="">Web Development</a>
+							</h4>
+							<p class="description">Our web development services encompass
+								everything from captivating websites to complex web portals.</p>
+						</div>
+					</div>
+
+					<div
+						class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+						<div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+							<div class="icon">
+								<i class="bx bx-world"></i>
+							</div>
+							<h4 class="title">
+								<a href="">UI/UX Design</a>
+							</h4>
+							<p class="description">Our design team combines aesthetics
+								with usability to create interfaces that leave a lasting
+								impression on your target audience.</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Featured Services Section -->
+
+		<!-- ======= About Section ======= -->
+		<section id="about" class="about section-bg">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>About</h2>
+					<h3>
+						Find Out More <span>About Us</span>
+					</h3>
+					<p></p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+						<img th:src="@{/img/pexels-karolina-grabowska-4977446.jpg}"
+							class="img-fluid" alt="">
+					</div>
+					<div
+						class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
+						data-aos="fade-up" data-aos-delay="100">
+						<h3>At Aste</h3>
+						<p class="fst-italic">We are not just another software
+							company; we are your strategic technology partner on a mission to
+							revolutionize the digital landscape. With a rich tapestry of
+							experience and a fervent commitment to innovation, we stand at
+							the forefront of shaping the future through cutting-edge software
+							solutions.</p>
+						<ul>
+							<li><i class="bx bx-store-alt"></i>
+								<div>
+									<h5>Our Vision</h5>
+									<p>To be the driving force behind transformative
+										technological solutions that empower businesses to thrive in a
+										dynamic and interconnected world.</p>
+								</div></li>
+							<li><i class="bx bx-images"></i>
+								<div>
+									<h5>Our Mission</h5>
+									<p>Empowering businesses with tailored software solutions
+										that enhance efficiency, elevate user experiences, and unlock
+										new avenues of growth.</p>
+								</div></li>
+						</ul>
+						<p>
+						<h5>Why Choose Us:</h5>
+						Your success is our success. We listen intently to your needs,
+						aspirations, and challenges, tailoring our solutions to align
+						seamlessly with your business goals. Your satisfaction is the
+						heartbeat of our operation.
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- End About Section -->
+
+
+
+		<!-- ======= Counts Section ======= -->
+		<section id="counts" class="counts">
+			<div class="container" data-aos="fade-up">
+
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6">
+						<div class="count-box">
+							<i class="bi bi-emoji-smile"></i> <span
+								data-purecounter-start="0" data-purecounter-end="232"
+								data-purecounter-duration="1" class="purecounter"></span>
+							<p>Happy Clients</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+						<div class="count-box">
+							<i class="bi bi-journal-richtext"></i> <span
+								data-purecounter-start="0" data-purecounter-end="521"
+								data-purecounter-duration="1" class="purecounter"></span>
+							<p>Projects</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+						<div class="count-box">
+							<i class="bi bi-headset"></i> <span data-purecounter-start="0"
+								data-purecounter-end="24" data-purecounter-duration="1"
+								class="purecounter"></span>
+							<p>Hours Of Support</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+						<div class="count-box">
+							<i class="bi bi-people"></i> <span data-purecounter-start="0"
+								data-purecounter-end="15" data-purecounter-duration="1"
+								class="purecounter"></span>
+							<p>Hard Workers</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Counts Section -->
+
+		<!-- ======= Clients Section ======= -->
+		<section id="clients" class="clients section-bg">
+			<div class="container" data-aos="zoom-in">
+
+				<div class="row">
+
+					<div
+						class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+						<img th:src="@{/img/clients/client1-removebg-preview (1).png}"
+							class="img-fluid" alt="">
+					</div>
+
+					<div
+						class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+						<img th:src="@{/img/clients/client2_-removebg-preview (1).png}"
+							class="img-fluid" alt="">
+					</div>
+
+					<div
+						class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+						<img th:src="@{/img/clients/client3-removebg-preview (1).png}"
+							class="img-fluid" alt="">
+					</div>
+
+					<div
+						class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+						<img
+							th:src="@{/img/clients/logoimg-removebg-preview-removebg-preview.png}"
+							class="img-fluid" alt="">
+					</div>
+
+					<div
+						class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+						<img th:src="@{/img/clients/client66-removebg-preview.png}"
+							class="img-fluid" alt="">
+					</div>
+
+					<div
+						class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+						<img th:src="@{/img/clients/stamp2-modified-removebg-preview.png}"
+							class="img-fluid" alt="">
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Clients Section -->
+
+		<!-- ======= Services Section ======= -->
+		<section id="services" class="services">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>Services</h2>
+					<h3>
+						Check our <span>Services</span>
+					</h3>
+					<!-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae
+            autem.</p> -->
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch"
+						data-aos="zoom-in" data-aos-delay="100">
+						<div class="icon-box">
+							<div class="icon">
+								<i class="bx bxl-dribbble"></i>
+							</div>
+							<h4>
+								<a href="">Custom Software Development</a>
+							</h4>
+							<p>We specialize in crafting bespoke software solutions that
+								align perfectly with your business objectives.</p>
+						</div>
+					</div>
+
+					<div
+						class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
+						data-aos="zoom-in" data-aos-delay="200">
+						<div class="icon-box">
+							<div class="icon">
+								<i class="bx bx-file"></i>
+							</div>
+							<h4>
+								<a href="">Full-Stack Development</a>
+							</h4>
+							<p>Our experts are proficient in both front-end and back-end
+								technologies. We build seamless and interactive user experiences
+								while ensuring robust architecture and efficient functionality
+								under the hood.</p>
+						</div>
+					</div>
+
+					<div
+						class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0"
+						data-aos="zoom-in" data-aos-delay="300">
+						<div class="icon-box">
+							<div class="icon">
+								<i class="bx bx-tachometer"></i>
+							</div>
+							<h4>
+								<a href="">Mobile App Development</a>
+							</h4>
+							<p>Captivate your audience with cutting-edge mobile
+								applications for iOS and Android platforms</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+						data-aos="zoom-in" data-aos-delay="100">
+						<div class="icon-box">
+							<div class="icon">
+								<i class="bx bx-world"></i>
+							</div>
+							<h4>
+								<a href="">Web Development</a>
+							</h4>
+							<p>Your online presence matters. Our web development services
+								encompass everything from captivating websites to complex web
+								portals. We focus on responsive design, intuitive navigation,
+								and optimal performance.</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+						data-aos="zoom-in" data-aos-delay="200">
+						<div class="icon-box">
+							<div class="icon">
+								<i class="bx bx-slideshow"></i>
+							</div>
+							<h4>
+								<a href="">UI/UX Design</a>
+							</h4>
+							<p>Stand out in the digital landscape with captivating and
+								user-centric designs. Our design team combines aesthetics with
+								usability to create interfaces that leave a lasting impression
+								on your target audience.</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+						data-aos="zoom-in" data-aos-delay="300">
+						<div class="icon-box">
+							<div class="icon">
+								<i class="bx bx-arch"></i>
+							</div>
+							<h4>
+								<a href="">E-Commerce Solutions</a>
+							</h4>
+							<p>Seamlessly transition your business to the digital
+								marketplace with our tailored e-commerce solutions. We empower
+								you to reach a global customer base and maximize sales
+								opportunities.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+						data-aos="zoom-in" data-aos-delay="200">
+						<div class="icon-box">
+							<div class="icon">
+								<i class="bx bx-slideshow"></i>
+							</div>
+							<h4>
+								<a href="">Quality Assurance and Testing</a>
+							</h4>
+							<p>Your software's reliability and performance are
+								non-negotiable. Our meticulous testing processes ensure that
+								your product is bug-free, secure, and ready to exceed user
+								expectations.</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+						data-aos="zoom-in" data-aos-delay="300">
+						<div class="icon-box">
+							<div class="icon">
+								<i class="bx bx-arch"></i>
+							</div>
+							<h4>
+								<a href="">Maintenance and Support</a>
+							</h4>
+							<p>Our commitment doesn't end at deployment. We offer ongoing
+								maintenance and support services to keep your software running
+								smoothly and adapt to evolving needs.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+						data-aos="zoom-in" data-aos-delay="200">
+						<div class="icon-box">
+							<div class="icon">
+								<i class="bx bx-slideshow"></i>
+							</div>
+							<h4>
+								<a href="">Emerging Technologies</a>
+							</h4>
+							<p>Stay ahead of the curve with our expertise in emerging
+								technologies such as AI, machine learning, blockchain, and more.
+								We integrate these innovations into your solutions to give you a
+								competitive edge.</p>
+						</div>
+					</div>
+
+
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Services Section -->
+
+		<!-- ======= Testimonials Section ======= -->
+		<section id="testimonials" class="testimonials">
+			<div class="container" data-aos="zoom-in">
+
+				<div class="testimonials-slider swiper" data-aos="fade-up"
+					data-aos-delay="100">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide">
+							<div class="testimonial-item">
+								<img th:src="@{/img/man.png}" class="testimonial-img bg-white"
+									alt="">
+								<h3>Salman Quadir</h3>
+								<h4>Frontend Developer</h4>
+								<p>
+									<i class="bx bxs-quote-alt-left quote-icon-left"></i> Our
+									mission at Aste is to revolutionize industries through
+									cutting-edge software solutions. We believe in harnessing the
+									power of code to drive efficiency, enhance user experiences,
+									and solve complex challenges. <i
+										class="bx bxs-quote-alt-right quote-icon-right"></i>
+								</p>
+							</div>
+						</div>
+						<!-- End testimonial item -->
+
+						<div class="swiper-slide">
+							<div class="testimonial-item">
+								<img th:src="@{/img/man.png}" class="testimonial-img bg-white"
+									alt="">
+								<h3>Aamir Kuchay</h3>
+								<h4>Backend Developer</h4>
+								<p>
+									<i class="bx bxs-quote-alt-left quote-icon-left"></i> we are at
+									the forefront of technological innovation, dedicated to pushing
+									boundaries and creating impactful solutions in the software
+									development industry. <i
+										class="bx bxs-quote-alt-right quote-icon-right"></i>
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="testimonial-item">
+								<img th:src="@{/img/man.png}" class="testimonial-img bg-white"
+									alt="">
+								<h3>Riyaz Ahmad Tantry</h3>
+								<h4>Frontend Developer</h4>
+								<p>
+									<i class="bx bxs-quote-alt-left quote-icon-left"></i> We
+									embrace creativity and constantly seek innovative ways to
+									approach problems. Our culture encourages out-of-the-box
+									thinking and fosters an environment where new ideas are
+									nurtured. <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+								</p>
+							</div>
+						</div>
+						<!-- End testimonial item -->
+
+
+
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
+			</div>
+		</section>
+		<!-- End Testimonials Section -->
+
+
+
+		<!-- ======= Team Section ======= -->
+		<section id="team" class="team section-bg">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>Team</h2>
+					<h3>
+						Our Managing <span>Team</span>
+					</h3>
+					<!-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae
+            autem.</p> -->
+				</div>
+
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6 d-flex align-items-stretch"
+						data-aos="fade-up" data-aos-delay="100">
+						<div class="member">
+							<div class="member-img">
+								<img th:src="@{/img/man.png}" class="img-fluid" alt="">
+								<!-- <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div> -->
+							</div>
+							<div class="member-info">
+								<h4>Mr.Khursheed Ahmad</h4>
+								<span>Director/CEO</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 d-flex align-items-stretch"
+						data-aos="fade-up" data-aos-delay="200">
+						<div class="member">
+							<div class="member-img">
+								<img th:src="@{/img/man.png}" class="img-fluid" alt="">
+								<!-- <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div> -->
+							</div>
+							<div class="member-info">
+								<h4>Mr.Altaf Ahmad</h4>
+								<span>Managing Director</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 d-flex align-items-stretch"
+						data-aos="fade-up" data-aos-delay="300">
+						<div class="member">
+							<div class="member-img">
+								<img th:src="@{/img/hairstyle.png}" class="img-fluid" alt="">
+								<!-- <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div> -->
+							</div>
+							<div class="member-info">
+								<h4>Mrs.Zahida</h4>
+								<span>Hr</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 d-flex align-items-stretch"
+						data-aos="fade-up" data-aos-delay="400">
+						<div class="member">
+							<div class="member-img">
+								<img th:src="@{/img/man.png}" class="img-fluid" alt="">
+								<!-- <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div> -->
+							</div>
+							<div class="member-info">
+								<h4>Mr.Imtiyaz Ahmad</h4>
+								<span>Senior Software Developer</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Team Section -->
+
+
+
+
+
+		<!-- ======= Contact Section ======= -->
+		<section id="contact" class="contact">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>Contact</h2>
+					<h3>
+						<span>Contact Us</span>
+					</h3>
+
+				</div>
+
+				<div class="row" data-aos="fade-up" data-aos-delay="100">
+					<div class="col-lg-6">
+						<div class="info-box mb-4">
+							<i class="bx bx-map"></i>
+							<h3>Our Address</h3>
+							<p>STPI,SIDCO ELECTRONICS,RANGRETH - 190007</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6">
+						<div class="info-box  mb-4">
+							<i class="bx bx-envelope"></i>
+							<h3>Email Us</h3>
+							<p>hr@aste.net.in</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6">
+						<div class="info-box  mb-4">
+							<i class="bx bx-phone-call"></i>
+							<h3>Call Us</h3>
+							<p>0194-2300302</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row" data-aos="fade-up" data-aos-delay="100">
+
+					<div class="col-lg-6 ">
+						<iframe class="mb-4 mb-lg-0"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.641985733635!2d74.79143897495376!3d34.00172852039712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18e08ebdd75e9%3A0x67fdef28faef80d!2sAlamdar%20Software%20Technology%20and%20Engineering%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1691727467762!5m2!1sen!2sin"
+							frameborder="0" style="border: 0; width: 100%; height: 384px;"
+							allowfullscreen></iframe>
+
+					</div>
+
+					<div class="col-lg-6">
+						<form id="my-form" th:action="@{/mail/sendmail}" method="post"
+							role="form" class="php-email-form">
+							<div class="row">
+								<div class="col form-group">
+									<input type="text" name="name" class="form-control" id="name"
+										placeholder="Your Name" required>
+								</div>
+								<div class="col form-group">
+									<input type="email" class="form-control" name="email"
+										id="email" placeholder="Your Email" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" name="subject"
+									id="subject" placeholder="Subject" required>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="message" rows="5"
+									placeholder="Message" required></textarea>
+							</div>
+
+
+							<div class="text-center">
+								<button type="submit">Send Message</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Contact Section -->
+
+	</main>
+	<!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer">
+
+
+
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6 footer-contact">
+						<h3>
+							ASTE<span>.</span>
+						</h3>
+						<p>
+							STPI,SIDCO ELECTRONICS<br> RANGRETH,BUDGAM<br> 190007<br>
+							<br> <strong>Phone:</strong> 0194-2300302<br> <strong>Email:</strong>
+							hr@aste.net.in<br>
+						</p>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4>Useful Links</h4>
+						<ul>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">About
+									us</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Terms
+									of service</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Privacy
+									policy</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4>Our Services</h4>
+						<ul>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Web
+									Design</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Web
+									Development</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Product
+									Management</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">App
+									Development</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Graphic
+									Design</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4>Our Social Networks</h4>
+						<p>Connect with us:</p>
+						<div class="social-links mt-3">
+							<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> <a
+								href="#" class="facebook"><i class="bx bxl-facebook"></i></a> <a
+								href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+							<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+							<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container py-4">
+			<div class="copyright">
+				&copy; Copyright <strong><span>ASTE</span></strong>. All Rights
+				Reserved
+			</div>
+			<div class="credits">
+				Designed by <a href="">ASTE Team</a>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<div id="preloader"></div>
+	<a href="#"
+		class="back-to-top d-flex align-items-center justify-content-center"><i
+		class="bi bi-arrow-up-short"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+		integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+		crossorigin="anonymous"></script>
+	<script th:src="@{/vendor/purecounter/purecounter_vanilla.js}"></script>
+	<script th:src="@{/vendor/aos/aos.js}"></script>
+	<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	<script th:src="@{/vendor/glightbox/js/glightbox.min.js}"></script>
+	<script th:src="@{/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+	<script th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+	<script th:src="@{/vendor/waypoints/noframework.waypoints.js}"></script>
+	<script th:src="@{/js/alertClose.js}"></script>
+	
+
+	<script th:src="@{/js/main.js}"></script>
+
+
+</body>
+
+</html>
